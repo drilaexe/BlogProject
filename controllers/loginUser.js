@@ -7,7 +7,7 @@ const User = require('../models/User');
         if(user){
             bcrypt.compare(password,user.password,(error,same)=>{
                 if (same) {
-                    //store session
+                    req.session.userId=user._id
                     res.redirect('/')
                 }else{
                     res.redirect('/auth/login')
