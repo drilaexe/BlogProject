@@ -1,10 +1,11 @@
+require('dotenv').config()
 const express = require('express');
 const expressSession = require('express-session');
 const app = new express();
 const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
 const flash = require('connect-flash');
-mongoose.connect('mongodb+srv://drila:prej1deri8@cluster0.pxmetws.mongodb.net/Blog_Db', { useNewUrlParser: true })
+mongoose.connect(process.env.DBSTR, { useNewUrlParser: true })
 
 
 const ejs = new require('ejs');
