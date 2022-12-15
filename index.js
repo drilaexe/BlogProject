@@ -4,7 +4,7 @@ const app = new express();
 const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
 const flash = require('connect-flash');
-mongoose.connect('mongodb://localhost:27017/Blog_Db', { useNewUrlParser: true })
+mongoose.connect('mongodb+srv://drila:prej1deri8@cluster0.pxmetws.mongodb.net/Blog_Db', { useNewUrlParser: true })
 
 
 const ejs = new require('ejs');
@@ -49,7 +49,10 @@ app.get("/auth/login", redirectIfAuthenticatedMiddleware, loginController);
 app.get("/auth/logout", logoutController);
 app.use((req, res) => res.render('notfound'))
 
-app.listen(4000, () => {
+let port=process.env.PORT;
+if(port==null || port==""){
+    port=4000;
+}
+app.listen(port, () => {
     console.log('App is listening in port 4000')
-    console.log('http://localhost:4000')
 })

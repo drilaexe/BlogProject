@@ -7,8 +7,11 @@
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Drilon Syla",
   "license": "ISC",
+  "engines": {
+    "node": "16.17.0"
+  },
   "dependencies": {
     "bcrypt": "^5.1.0",
     "connect-flash": "^0.1.1",
