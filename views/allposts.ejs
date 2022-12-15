@@ -4,16 +4,27 @@
     <body>
    <%- include("layouts/navbar");-%>
     <!-- Page Header-->
-    <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
+    <style>
+        header.masthead {
+            position: relative;
+             margin-bottom: 0rem; 
+        padding-top: 0;
+            padding-bottom: 5rem;
+            background: no-repeat center center; 
+             background-color: #6c757d; 
+             background-size: cover; 
+            background-attachment: scroll;
+        }</style>
+    <header class="masthead">
         <div class="container position-relative px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
+            <!-- <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="site-heading">
-                        <h1>Blog</h1>
-                        <span class="subheading">  by Drilon Syla</span>
+                        <h1>Clean Blog</h1>
+                        <span class="subheading">A Blog Theme by Start Bootstrap</span>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </header>
         <!-- Main Content-->
@@ -38,7 +49,6 @@
                     <% } %> 
                  
                     <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="/posts">Older Posts →</a></div>
                 </div>
             </div>
         </div>

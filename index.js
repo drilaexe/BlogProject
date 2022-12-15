@@ -11,6 +11,7 @@ const ejs = new require('ejs');
 
 const newPostController = require('./controllers/newPost')
 const homeController = require('./controllers/home')
+const allPostsController = require('./controllers/getAllPosts.js')
 const getPostController = require('./controllers/getPost')
 const storePostController = require('./controllers/storePost')
 const newUserController = require('./controllers/newUser')
@@ -39,6 +40,7 @@ app.use('*', (req, res, next) => {
 })
 app.use('/posts/store', validateMiddleWare);
 app.get('/', homeController);
+app.get('/posts', allPostsController);
 app.get("/post/:id", getPostController);
 app.get("/posts/new", authMiddleware, newPostController);
 app.post("/posts/store", authMiddleware, storePostController);
