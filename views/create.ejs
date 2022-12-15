@@ -18,10 +18,10 @@
                 </div>
             </header>
             <!-- Main Content-->
-            <main class="mb-4">
+            <main class="mb-2">
                 <div class="container px-4 px-lg-5">
                     <div class="row gx-4 gx-lg-5 justify-content-center">
-                        <div class="col-md-10 col-lg-8 col-xl-7">
+                       
 
                             <div class="my-5">
 
@@ -37,15 +37,21 @@
                                     <div class="form-floating">
                                         <textarea class="form-control" id="description" name="body"
                                             placeholder="Enter your description here..."
-                                            style="height: 12rem"></textarea>
-                                        <label for="description">Description</label>
-
+                                            ></textarea>
+                                        <!-- <label for="description">Description</label> -->
+                                        <script>
+                                            $('#description').summernote({
+                                                placeholder: 'Hello Bootstrap 4',
+                                                tabsize: 2,
+                                                height:200
+                                            });
+                                        </script>
                                     </div>
-                                    <div class="control-group">
-                                        <div class="form-control floating-label-form-group controls">
-                                            <label>Image</label>
+                                    <div class="control-group mt-2">
+                                        <!-- <div class="form-control floating-label-form-group controls"> -->
+                                            <!-- <label>Image</label> -->
                                             <input type="file" class="form-control" id="image" name="image">
-                                        </div>
+                                        <!-- </div> -->
                                     </div>
                                     <br />
                                     <!-- Submit success message-->
@@ -65,7 +71,7 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
+                  
                 </div>
             </main>
             <%- include("layouts/footer");-%>
