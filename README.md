@@ -3,7 +3,7 @@ This is  a Blog project based on a book written by [Greg Lim](https://github.com
 I have used Node.js,Bootstrap,EJS,Express and MongoDB for this Project <br>
 To run this project just type in terminal :
 ```javascript
-npm install
+>npm install
 >npm run start
 ```
 Also i have deployed this paroject you can find it here 
