@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
         validationErrors.push('Tittle is required')
     }
  
-    if (req.files == null || req.body.tittle == null) {
+    if (req.files == null || req.body.tittle == null || req.body.tittle == "" ) {
         req.flash('validationErrors',validationErrors);  
         return res.redirect('/posts/new')
     }
