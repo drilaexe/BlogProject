@@ -6,5 +6,5 @@ To run this project just type in terminal :
 >npm install
 >npm run start
 ```
-Also i have deployed this paroject you can find it here 
+Also i have deployed this project you can find it here 
 [Blog Post](https://blogproject2.onrender.com)
