@@ -5,6 +5,7 @@ const app = new express();
 const mongoose = require('mongoose');
 const fileUpload = require('express-fileupload');
 const flash = require('connect-flash');
+mongoose.set("strictQuery", false);
 mongoose.connect(process.env.DBSTR, { useNewUrlParser: true })
 
 
@@ -57,5 +58,5 @@ if(port==null || port==""){
     port=4000;
 }
 app.listen(port, () => {
-    console.log('App is listening in port 4000')
+    console.log(`App is listening in port ${port}`)
 })
